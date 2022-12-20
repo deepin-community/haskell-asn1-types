@@ -1,0 +1,73 @@
+Source: haskell-asn1-types
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Clint Adams <clint@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-hourglass-dev,
+ libghc-hourglass-prof,
+ libghc-memory-dev,
+ libghc-memory-prof,
+Build-Depends-Indep:
+ ghc-doc,
+ libghc-hourglass-doc,
+ libghc-memory-doc,
+Standards-Version: 4.1.4
+Homepage: http://github.com/vincenthz/hs-asn1
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-asn1-types
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-asn1-types]
+
+Package: libghc-asn1-types-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: ASN.1 types${haskell:ShortBlurb}
+ These are ASN.1 standard types
+ .
+ ${haskell:Blurb}
+
+Package: libghc-asn1-types-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: ASN.1 types${haskell:ShortBlurb}
+ These are ASN.1 standard types
+ .
+ ${haskell:Blurb}
+
+Package: libghc-asn1-types-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: ASN.1 types${haskell:ShortBlurb}
+ These are ASN.1 standard types
+ .
+ ${haskell:Blurb}
